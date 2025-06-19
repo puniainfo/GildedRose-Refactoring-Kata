@@ -37,17 +37,17 @@ gildedrose/
 ## Run is Locally
 
 ### Install Required Package
-    ```
+    ```text
         pip install -r requirements.txt
     ```
 
 ### Run Application in Locally
-    ```
+    ```text
         python main.py
     ```
 
 ### Run Test Locally
-    ```
+    ```text
         pytest --cov=src --cov-report=term-missing --cov-report=html
     ```
 
@@ -55,11 +55,11 @@ gildedrose/
 ## Run Via Docker
 
 ### Create Docker Build
-    ```
+    ```text
         docker build -t gildedrose .
     ```
     
 ### Run Docker container
-    ```
+    ```text
         docker run --rm gildedrose
     ```

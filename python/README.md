@@ -37,14 +37,14 @@ gildedrose/
 ## Run is Locally
 
 ### Install Required Package
-    ```text
-        pip install -r requirements.txt
-    ```
+    
+    pip install -r requirements.txt
+    
 
 ### Run Application in Locally
-    ```text
+    
         python main.py
-    ```
+    
 
 ### Run Test Locally
     ```text

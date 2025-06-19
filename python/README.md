@@ -43,23 +43,22 @@ gildedrose/
 
 ### Run Application in Locally
     
-        python main.py
+    python main.py
     
 
 ### Run Test Locally
-    ```text
-        pytest --cov=src --cov-report=term-missing --cov-report=html
-    ```
+
+    pytest --cov=src --cov-report=term-missing --cov-report=html
+    
 
 
 ## Run Via Docker
 
 ### Create Docker Build
-    ```text
-        docker build -t gildedrose .
-    ```
+    
+    docker build -t gildedrose .
+
     
 ### Run Docker container
-    ```text
-        docker run --rm gildedrose
-    ```
+    docker run --rm gildedrose
+    

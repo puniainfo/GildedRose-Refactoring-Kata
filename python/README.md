@@ -1,29 +1,65 @@
-# Gilded Rose starting position in Python
+#  Gilded Rose Inventory Manager
 
-For exercise instructions see [top level README](../README.md)
+A clean Python implementation of the Gilded Rose Kata using the Strategy Pattern. This project is Dockerized, unit tested with Pytest, and follows PEP8 standards for clean code.
 
-Suggestion: create a python virtual environment for this project. See the [documentation](https://docs.python.org/3/library/venv.html)
+---
 
-## Run the unit tests from the Command-Line
+## Tech Stack
 
+- Python 3.12  
+- Docker  
+- Pytest + Coverage  
+- Strategy Design Pattern  
+- PEP8 + Linting  
+
+---
+
+## Project Structure
+
+```text
+gildedrose/
+├── Dockerfile
+├── README.md
+├── requirements.txt
+├── entrypoint.sh
+├── src/
+│   ├── __init__.py
+│   ├── models.py             # Item model and base strategy class
+│   ├── strategies.py         # Strategy implementations (Aged Brie, Backstage, etc.)
+│   └── gilded_rose.py        # Inventory manager using strategy pattern
+├── tests/
+│   ├── __init__.py
+│   ├── test_models.py
+│   ├── test_strategies.py
+│   └── test_gilded_rose.py
 ```
-python test_gilded_rose.py
-```
 
-## Run the TextTest fixture from the Command-Line
+## Run is Locally
 
-For e.g. 10 days:
+### Install Required Package
+    ```
+        pip install -r requirements.txt
+    ```
 
-```
-python texttest_fixture.py 10
-```
+### Run Application in Locally
+    ```
+        python main.py
+    ```
 
-You should make sure the command shown above works when you execute it in a terminal before trying to use TextTest (see below).
+### Run Test Locally
+    ```
+        pytest --cov=src --cov-report=term-missing --cov-report=html
+    ```
 
 
-## Run the TextTest approval test that comes with this project
+## Run Via Docker
 
-There are instructions in the [TextTest Readme](../texttests/README.md) for setting up TextTest. You will need to specify the Python executable and interpreter in [config.gr](../texttests/config.gr). Uncomment these lines:
-
-    executable:${TEXTTEST_HOME}/python/texttest_fixture.py
-    interpreter:python
+### Create Docker Build
+    ```
+        docker build -t gildedrose .
+    ```
+    
+### Run Docker container
+    ```
+        docker run --rm gildedrose
+    ```
